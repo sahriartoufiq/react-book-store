@@ -1,4 +1,5 @@
 import React from "react";
+import {fetchUserList} from '../api/utils';
 
 class UserList extends React.Component {
   constructor(props) {
@@ -22,23 +23,25 @@ class UserList extends React.Component {
   componentWillUnmount() {}
 
   getUserList() {
-    const url = "http://localhost:5000/api/users";
-    const headers = new Headers({
-      "Content-Type": "application/json"
-    });
+    // const url = "http://localhost:5000/api/users";
+    // const headers = new Headers({
+    //   "Content-Type": "application/json"
+    // });
 
-    headers.append(
-      "Authorization",
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YmVjMjYwNDgwMTU3YjQzODViY2I4ZWQiLCJ1c2VybmFtZSI6InRvdWZpcSIsInNjb3BlIjpbImFkbWluIiwic3RhZmYiXSwiaWF0IjoxNTQyODY3NjY2fQ.73BcNIzNEPOSqhvNN6QC1EkR-RAmGyAkMfFijEZ3lvg"
-    );
-    let options = {
-      method: "GET"
-    };
-    const defaults = { headers: headers };
-    options = Object.assign({}, defaults, options);
+    // headers.append(
+    //   "Authorization",
+    //   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YmVjMjYwNDgwMTU3YjQzODViY2I4ZWQiLCJ1c2VybmFtZSI6InRvdWZpcSIsInNjb3BlIjpbImFkbWluIiwic3RhZmYiXSwiaWF0IjoxNTQyODY3NjY2fQ.73BcNIzNEPOSqhvNN6QC1EkR-RAmGyAkMfFijEZ3lvg"
+    // );
+    // let options = {
+    //   method: "GET"
+    // };
+    // const defaults = { headers: headers };
+    // options = Object.assign({}, defaults, options);
 
-    fetch(url, options)
-      .then(response => response.json())
+    // fetch(url, options)
+    //   .then(response => response.json())
+
+    fetchUserList()
       .then(data => {
         console.log(data);
         this.setState({
