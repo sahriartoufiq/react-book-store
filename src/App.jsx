@@ -15,11 +15,8 @@ class App extends Component {
           <Link to="/users"> User List</Link>
           <Link to="/login"> Login</Link>
           <Link to="/reg">Reg</Link>
-<<<<<<< HEAD
           <Link to="/dum">dum</Link>
-=======
           <Link to="/dummy">Dummy</Link>
->>>>>>> origin
         </nav>
         <Route path="/users" component={UserList} />
         <Route path="/login" component={Login}/>
