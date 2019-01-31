@@ -19,7 +19,6 @@ class App extends Component {
         </nav>
         <Route path="/users" component={UserList} />
         <Route path="/login" component={Login}/>
-        <Route path="/reg" component={YupTest}/>
       </div>
     );
   }
